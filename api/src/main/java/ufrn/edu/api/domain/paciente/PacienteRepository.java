@@ -1,4 +1,4 @@
-package ufrn.edu.api.paciente;
+package ufrn.edu.api.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

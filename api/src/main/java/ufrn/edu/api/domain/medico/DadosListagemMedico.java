@@ -1,4 +1,4 @@
-package ufrn.edu.api.medico;
+package ufrn.edu.api.domain.medico;
 
 public record DadosListagemMedico(Long id,String nome, String crm, String email, Especialidade especialidade) {
 

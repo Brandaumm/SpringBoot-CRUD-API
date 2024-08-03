@@ -1,11 +1,11 @@
-package ufrn.edu.api.medico;
+package ufrn.edu.api.domain.medico;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import ufrn.edu.api.endereco.Endereco;
+import ufrn.edu.api.domain.endereco.Endereco;
 
 
 @Table(name = "medicos")

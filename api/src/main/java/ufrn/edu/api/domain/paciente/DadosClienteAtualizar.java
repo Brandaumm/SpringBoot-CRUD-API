@@ -1,4 +1,4 @@
-package ufrn.edu.api.paciente;
+package ufrn.edu.api.domain.paciente;
 
 import jakarta.validation.constraints.NotNull;
 

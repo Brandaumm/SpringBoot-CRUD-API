@@ -1,11 +1,11 @@
-package ufrn.edu.api.medico;
+package ufrn.edu.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import ufrn.edu.api.endereco.DadosEndereco;
+import ufrn.edu.api.domain.endereco.DadosEndereco;
 
 public record DadosCadastroMedico(
         @NotBlank

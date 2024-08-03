@@ -1,4 +1,4 @@
-package ufrn.edu.api.paciente;
+package ufrn.edu.api.domain.paciente;
 
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf, Boolean ativo) {
 

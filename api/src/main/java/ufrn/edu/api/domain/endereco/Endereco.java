@@ -1,4 +1,4 @@
-package ufrn.edu.api.endereco;
+package ufrn.edu.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

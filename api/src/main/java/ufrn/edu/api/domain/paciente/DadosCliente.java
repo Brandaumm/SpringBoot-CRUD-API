@@ -1,10 +1,9 @@
-package ufrn.edu.api.paciente;
+package ufrn.edu.api.domain.paciente;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.validation.annotation.Validated;
-import ufrn.edu.api.endereco.DadosEndereco;
+import ufrn.edu.api.domain.endereco.DadosEndereco;
 
 public record DadosCliente(
         @NotBlank
