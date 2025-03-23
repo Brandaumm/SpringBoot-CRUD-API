@@ -7,6 +7,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import ufrn.edu.api.domain.ValidacaoExpection;
 
 @RestControllerAdvice
 public class TratadorDeErros {
@@ -20,9 +21,13 @@ public class TratadorDeErros {
     public ResponseEntity tratarErro400(MethodArgumentNotValidException ex){
         var erros = ex.getFieldErrors();
         return ResponseEntity.badRequest().body(erros.stream().map(DadosErroValidacao::new).toList());
-
     }
 
+
+    @ExceptionHandler(ValidacaoExpection.class)
+    public ResponseEntity tratarErroRegraDeNegocio(ValidacaoExpection ex){
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 
     private record DadosErroValidacao(String campo, String mensagem){
 

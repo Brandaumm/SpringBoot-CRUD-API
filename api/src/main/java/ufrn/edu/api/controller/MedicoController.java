@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import ufrn.edu.api.domain.medico.*;
-import ufrn.edu.api.domain.medico.*;
 
 @RestController
 @RequestMapping("/medicos")
@@ -27,17 +26,11 @@ public class MedicoController {
     repository.save(medico);
 
     var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
-
     return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
     }
 
-
-    //public List<DadosListagemMedico> listar(){
-    //return repository.findAll().stream().map(DadosListagemMedico::new).toList();
-    //}
     @GetMapping
     public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
-
         var page = repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
         return ResponseEntity.ok(page);
     }
